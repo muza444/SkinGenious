@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Косметический помощник | Персонализированный уход за кожей</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="#7EC8D6" stroke-width="2"/>
+                        <path d="M16 6 L16 26 M6 16 L26 16" stroke="#7EC8D6" stroke-width="2" opacity="0.3"/>
+                        <circle cx="16" cy="16" r="4" fill="#7EC8D6" opacity="0.5"/>
+                        <circle cx="16" cy="16" r="2" fill="#A8D8EA"/>
+                    </svg>
+                    <span>SkinGenius</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#how-it-works">Как это работает</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#blog">Блог</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline" id="login-btn">Войти</a>
+                    <a href="survey.html" class="btn btn-primary">Начать анализ</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Меню">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div> 
+        <hr>
+    </header>
+   <main>
+    <!-- НОВАЯ СЕКЦИЯ С ВИДЕО -->
+    <section class="hero-video-section">
+        <!-- Фоновое видео -->
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <!-- Замените src на путь к вашему скачанному файлу, например hero-bg.mp4 -->
+            <source src="видео.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        
+        <!-- Затемняющий слой для читаемости текста -->
+        <div class="hero-video-overlay"></div>
+
+        <!-- Текст и кнопки -->
+        <div class="container hero-video-content">
+            <h1>Персонализированный<br>уход за кожей с ИИ</h1>
+            <p class="subtitle">
+               SkinGenius — первый независимый ИИ-косметолог. Мы анализируем вашу кожу, а не продаем конкретный бренд. Честный подбор ухода на основе составов и науки, а не маркетинга
+            </p>
+            <div class="hero-buttons">
+                <a href="survey.html" class="btn-video-primary">Начать анализ</a>
+                <a href="#how-it-works" class="btn-video-secondary">Как это работает</a>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Почему поколение Z выбирает SkinGenius</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>ИИ-анализ кожи</h3>
+                    <p>Наша нейросеть анализирует ваши фотографии и определяет тип кожи, проблемы и оптимальные решения</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Персонализация</h3>
+                    <p>Рекомендации, созданные специально для вас, с учетом ваших предпочтений и бюджета</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Экологичный подход</h3>
+                    <p>Мы рекомендуем только этичные и устойчивые бренды, соответствующие вашим ценностям</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Отслеживание прогресса</h3>
+                    <p>Следите за изменениями вашей кожи и корректируйте уход по мере необходимости</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Как это работает</h2>
+                <p class="section-subtitle">Всего 4 простых шага до персонализированного ухода за кожей</p>
+            </div>
+            <div class="workflow">
+             <!-- Шаг 1 - Карточка с параллакс эффектом -->
+            <div class="workflow-step step-1">
+                <div class="step-content">
+                    <div class="step-number" data-aos="fade-up">01</div>
+                    <h3 class="step-title" data-aos="fade-up" data-aos-delay="100">Заполните анкету</h3>
+                    <p class="step-description" data-aos="fade-up" data-aos-delay="200">Ответьте на несколько вопросов о вашей коже, привычках и предпочтениях</p>
+                    <div class="step-cta" data-aos="fade-up" data-aos-delay="300">
+                    </div>
+                </div>
+                <div class="step-image" data-aos="fade-left">
+                    <div class="image-wrapper">
+                        <img src="фото1.png" alt="Заполнение анкеты" class="parallax-img">
+                        <div class="image-highlight"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Шаг 2 - Карточка с hover-эффектом -->
+            <div class="workflow-step step-2">
+                <div class="step-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="фото2.png" alt="Загрузка фото">
+                        <div class="image-overlay">
+                            <i class="fas fa-camera"></i>
+                            <span>Советы по освещению</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="step-number" data-aos="fade-up">02</div>
+                    <h3 class="step-title" data-aos="fade-up" data-aos-delay="100">Загрузите фото</h3>
+                    <p class="step-description" data-aos="fade-up" data-aos-delay="200">Сделайте селфи при хорошем освещении (мы подскажем как)</p>
+                    <ul class="step-features" data-aos="fade-up" data-aos-delay="300">
+                        <li><i class="fas fa-check-circle"></i> Достаточное освещение</li>
+                        <li><i class="fas fa-check-circle"></i> Чистая кожа без макияжа</li>
+                        <li><i class="fas fa-check-circle"></i> Прямой ракурс</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Шаг 3 - Карточка с графическими элементами -->
+            <div class="workflow-step step-3">
+                <div class="step-content">
+                    <div class="step-number" data-aos="fade-up">03</div>
+                    <h3 class="step-title" data-aos="fade-up" data-aos-delay="100">Получите анализ</h3>
+                    <p class="step-description" data-aos="fade-up" data-aos-delay="200">Наш ИИ проанализирует ваши данные за 2-3 минуты</p>
+                    <div class="ai-process" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process-bar">
+                            <div class="process-fill" style="width: 0%" data-aos="process-animation" data-aos-delay="400"></div>
+                        </div>
+                        <div class="process-stats">
+                            <div class="stat">
+                                <div class="stat-value">98%</div>
+                                <div class="stat-label">Точность</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">2-3 мин</div>
+                                <div class="stat-label">Время анализа</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-image" data-aos="fade-left">
+                    <div class="image-wrapper">
+                        <img src="https://imgfy.ru/ib/iEPvg2xLrjCKKjS_1771695107.png" alt="Анализ кожи">
+                        <div class="analysis-points">
+                            <div class="point point-1" data-aos="zoom-in" data-aos-delay="500"></div>
+                            <div class="point point-2" data-aos="zoom-in" data-aos-delay="600"></div>
+                            <div class="point point-3" data-aos="zoom-in" data-aos-delay="700"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаг 4 - Карточка с продуктами -->
+            <div class="workflow-step step-4">
+                <div class="step-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="фото3.png" alt="Рекомендации">
+                        <div class="product-badges">
+                            <span class="badge" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-leaf"></i> Vegan</span>
+                            <span class="badge" data-aos="fade-up" data-aos-delay="600"><i class="fas fa-heart"></i> Cruelty-free</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="step-number" data-aos="fade-up">04</div>
+                    <h3 class="step-title" data-aos="fade-up" data-aos-delay="100">Персонализированные рекомендации</h3>
+                    <p class="step-description" data-aos="fade-up" data-aos-delay="200">Получите индивидуальный уходовой routine и подборку продуктов</p>
+                    <div class="step-benefits" data-aos="fade-up" data-aos-delay="300">
+                        <div class="benefit">
+                            <i class="fas fa-magic"></i>
+                            <span>Подбор по вашему бюджету</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Персональный календарь ухода</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="workflow-cta" data-aos="fade-up">
+            <a href="survey.html" class="btn btn-primary btn-large with-icon">
+                Начать анализ кожи
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <p class="cta-note">Это займет всего 3 минуты</p>
+        </div>
+    </div>
+</section>
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <h2>Что говорят наши пользователи</h2>
+                <div class="reviews-slider">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="-" alt="Аня" class="user-avatar">
+                            <div class="user-info">
+                                <h4>Аня, 21</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Наконец-то поняла, почему все кремы мне не подходили! Оказалось, у меня не сухая, а обезвоженная кожа. Рекомендации SkinGenius изменили всё."</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="-" alt="Максим" class="user-avatar">
+                            <div class="user-info">
+                                <h4>Максим, 19</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Как парню было сложно разобраться в уходе за кожей. Это приложение дало мне четкие инструкции без лишней воды. Акне стало значительно меньше за месяц!"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="-" alt="Даша" class="user-avatar">
+                            <div class="user-info">
+                                <h4>Даша, 23</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Обожаю, что можно отслеживать прогресс! Видеть, как меняется кожа - лучшая мотивация не забрасывать уход. И все рекомендации этичные, что для меня важно."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ <section class="blog-preview" id="blog">
+    <div class="container">
+        <h2>Узнайте больше в нашем блоге</h2>
+        <div class="blog-grid">
+            
+            <article class="blog-card">
+                <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #E8F4F8, #C5E0D0); height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-leaf" style="font-size: 4rem; color: var(--primary-dark); opacity: 0.5;"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Скинимализм: почему Gen Z выбирает меньше продуктов</h3>
+                    <p class="blog-excerpt">Разбираем тренд на сокращение количества продуктов в уходе и как это влияет на кожу...</p>
+                    <a href="#" class="read-more" onclick="openArticle('skinimalism'); return false;">Читать <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #E8F5ED, #A8D8EA); height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-flask" style="font-size: 4rem; color: var(--primary-dark); opacity: 0.5;"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>5 ингредиентов, которые действительно работают</h3>
+                    <p class="blog-excerpt">Научный разбор эффективности популярных компонентов в косметике...</p>
+                    <a href="#" class="read-more" onclick="openArticle('ingredients'); return false;">Читать <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #F0F7FA, #E8F4F8); height: 200px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-vr-cardboard" style="font-size: 4rem; color: var(--primary-dark); opacity: 0.5;"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Как AR-технологии меняют beauty-индустрию</h3>
+                    <p class="blog-excerpt">Виртуальные примерки и цифровые консультации - будущее уже здесь...</p>
+                    <a href="#" class="read-more" onclick="openArticle('ar-tech'); return false;">Читать <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Готовы к идеальной коже?</h2>
+                    <p>Начните свой персонализированный уход сегодня</p>
+                    <a href="survey.html" class="btn btn-primary btn-large">Начать анализ кожи</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span>SkinGenius</span>
+                    </a>
+                    <p class="footer-text">Персонализированный уход за кожей с использованием искусственного интеллекта</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h4>О сервисе</h4>
+                        <ul>
+                            <li><a href="#">Как это работает</a></li>
+                            <li><a href="#">Наша технология</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-column">
+                        <h4>Ресурсы</h4>
+                        <ul>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Гид по ингредиентам</a></li>
+                            <li><a href="#">Словарь терминов</a></li>
+                            <li><a href="#">Исследования</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-column">
+                        <h4>Компания</h4>
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Карьера</a></li>
+                            <li><a href="#">Партнерство</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SkinGenius. Все права защищены.</p>
+                <div class="legal-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                    <a href="#">Cookie</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Модальное окно для статей -->
+<div id="article-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(44, 62, 80, 0.8); z-index: 9999; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
+    <div style="background: white; max-width: 700px; width: 90%; max-height: 85vh; overflow-y: auto; padding: 40px; border-radius: 16px; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+        
+        <!-- Кнопка закрытия -->
+        <button onclick="closeArticle()" style="position: absolute; top: 15px; right: 20px; font-size: 28px; background: none; border: none; cursor: pointer; color: #999;">&times;</button>
+        
+        <!-- Сюда вставляется текст -->
+        <div id="article-content" style="color: var(--text-primary, #2C3E50); line-height: 1.6;">
+            <!-- Текст статьи -->
+        </div>
+    </div>
+</div>
+
+    <!-- Модальное окно входа -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <h2>Вход в аккаунт</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Войти</button>
+            </form>
+            <div class="auth-options">
+                <p>Ещё нет аккаунта? <a href="#" id="show-signup">Зарегистрироваться</a></p>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
+            <div class="social-auth">
+                <p>Или войдите через:</p>
+                <div class="social-buttons">
+                    <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                    <button class="social-btn apple"><i class="fab fa-apple"></i> Apple</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
+    <script src="script2.js"></script>
+</body>
+</html>

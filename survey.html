@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета | SkinGenius</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="#7EC8D6" stroke-width="2"/>
+                        <path d="M16 6 L16 26 M6 16 L26 16" stroke="#7EC8D6" stroke-width="2" opacity="0.3"/>
+                        <circle cx="16" cy="16" r="4" fill="#7EC8D6" opacity="0.5"/>
+                        <circle cx="16" cy="16" r="2" fill="#A8D8EA"/>
+                    </svg>
+                    <span>SkinGenius</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Меню">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="survey-container">
+        <div class="container">
+            
+            <!-- СЕТКА: Сайдбар + Форма -->
+            <div class="survey-wrapper" id="survey-wrapper">
+                <!-- Левая панель с данными -->
+                <div class="survey-sidebar">
+                    <div class="sidebar-content">
+                        <div class="progress-circle-container">
+                            <svg class="progress-circle" viewBox="0 0 120 120" width="140" height="140">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#7EC8D6;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#8BC4A0;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                
+                                <g transform="rotate(-90 60 60)">
+                                    <circle class="progress-bg" cx="60" cy="60" r="50"/>
+                                    <circle 
+                                        class="progress-fill" 
+                                        cx="60" 
+                                        cy="60" 
+                                        r="50"
+                                        stroke-dasharray="314.159"
+                                        stroke-dashoffset="314.159"
+                                        id="progress-circle"
+                                    />
+                                </g>
+                                
+                                <text class="progress-text-center" x="60" y="60" text-anchor="middle" dominant-baseline="central">
+                                    <tspan id="progress-percent" x="60" dy="-4" font-size="22" font-weight="700">0%</tspan>
+                                    <tspan id="progress-step" x="60" dy="20" font-size="12" font-weight="400" fill="#6B7F8F">Шаг 1/5</tspan>
+                                </text>
+                            </svg>
+                        </div>
+                        
+                        <div class="sidebar-info">
+                            <h3 class="sidebar-title">Ваш прогресс</h3>
+                            <ul class="step-indicators">
+                                <li class="step-item active" data-step="1">
+                                    <span class="step-number">01</span>
+                                    <span class="step-label">Основная информация</span>
+                                </li>
+                                <li class="step-item" data-step="2">
+                                    <span class="step-number">02</span>
+                                    <span class="step-label">Уход за кожей</span>
+                                </li>
+                                <li class="step-item" data-step="3">
+                                    <span class="step-number">03</span>
+                                    <span class="step-label">Предпочтения</span>
+                                </li>
+                                <li class="step-item" data-step="4">
+                                    <span class="step-number">04</span>
+                                    <span class="step-label">Фотографии</span>
+                                </li>
+                                <li class="step-item" data-step="5">
+                                    <span class="step-number">05</span>
+                                    <span class="step-label">Анализ данных</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая панель с формой -->
+                <div class="survey-main" id="main-content-area">
+                    <form id="skin-survey" class="survey-form" novalidate>
+                        <!-- Шаг 1 -->
+                        <div class="survey-step active" id="step-1">
+                            <h2>Расскажите нам о себе</h2>
+                            <p class="step-description">Эта информация поможет нам лучше понять ваши потребности</p>
+                            
+                            <div class="form-group">
+                                <label for="age">Ваш возраст*</label>
+                                <input type="number" id="age" name="age" min="12" max="99" placeholder="Например: 25" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Ваш пол*</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="" disabled selected>Выберите пол</option>
+                                    <option value="female">Женский</option>
+                                    <option value="male">Мужской</option>
+                                    <option value="other">Другой</option>
+                                    <option value="prefer-not-to-say">Предпочитаю не указывать</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Где вы живете?*</label>
+                                <select id="location" name="location" required>
+                                    <option value="" disabled selected>Выберите регион</option>
+                                    <option value="urban">Город</option>
+                                    <option value="suburban">Пригород</option>
+                                    <option value="rural">Сельская местность</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Как бы вы описали свой образ жизни?*</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="lifestyle" value="active">
+                                        <span class="checkmark"></span>
+                                        Активный
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="lifestyle" value="stressful">
+                                        <span class="checkmark"></span>
+                                        Стрессовый
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="lifestyle" value="balanced">
+                                        <span class="checkmark"></span>
+                                        Сбалансированный
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="lifestyle" value="sedentary">
+                                        <span class="checkmark"></span>
+                                        Сидячий
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" onclick="nextStep(2)">Продолжить →</button>
+                            </div>
+                        </div>
+
+                        <!-- Шаг 2 -->
+                        <div class="survey-step" id="step-2">
+                            <h2>Ваш текущий уход за кожей</h2>
+                            <p class="step-description">Расскажите нам о вашей текущей рутине</p>
+                            
+                            <div class="form-group">
+                                <label>Какие проблемы кожи вас беспокоят?*</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="acne">
+                                        <span class="checkmark"></span>
+                                        Акне
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="blackheads">
+                                        <span class="checkmark"></span>
+                                        Черные точки
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="dryness">
+                                        <span class="checkmark"></span>
+                                        Сухость
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="oiliness">
+                                        <span class="checkmark"></span>
+                                        Жирный блеск
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="redness">
+                                        <span class="checkmark"></span>
+                                        Покраснения
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="pigmentation">
+                                        <span class="checkmark"></span>
+                                        Пигментация
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="wrinkles">
+                                        <span class="checkmark"></span>
+                                        Морщины
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="sensitivity">
+                                        <span class="checkmark"></span>
+                                        Чувствительность
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="skin-concerns" value="none" id="concern-none">
+                                        <span class="checkmark"></span>
+                                        Ничего из перечисленного
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="current-routine">Опишите ваш текущий уход за кожей</label>
+                                <textarea id="current-routine" name="current-routine" rows="3" placeholder="Например: утром умываюсь гелем, затем наношу увлажняющий крем..."></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" onclick="prevStep(1)">← Назад</button>
+                                <button type="button" class="btn btn-primary" onclick="nextStep(3)">Продолжить →</button>
+                            </div>
+                        </div>
+
+                        <!-- Шаг 3 -->
+                        <div class="survey-step" id="step-3">
+                            <h2>Ваши предпочтения и ценности</h2>
+                            <p class="step-description">Помогите нам подобрать продукты, которые соответствуют вашим ценностям</p>
+                            
+                            <div class="form-group">
+                                <label for="budget">Какой у вас бюджет на уход за кожей?*</label>
+                                <select id="budget" name="budget" required>
+                                    <option value="" disabled selected>Выберите вариант</option>
+                                    <option value="low">Экономный (до 2000 руб.)</option>
+                                    <option value="medium">Средний (2000-5000 руб.)</option>
+                                    <option value="high">Премиум (5000+ руб.)</option>
+                                    <option value="flexible">Готов(а) инвестировать</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Что для вас важно при выборе косметики?*</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="preferences" value="vegan">
+                                        <span class="checkmark"></span>
+                                        Веганский состав
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="preferences" value="cruelty-free">
+                                        <span class="checkmark"></span>
+                                        Не тестируется на животных
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="preferences" value="eco-packaging">
+                                        <span class="checkmark"></span>
+                                        Экологичная упаковка
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="preferences" value="natural">
+                                        <span class="checkmark"></span>
+                                        Натуральные ингредиенты
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="preferences" value="science-backed">
+                                        <span class="checkmark"></span>
+                                        Научная эффективность
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="preferences" value="brand-reputation">
+                                        <span class="checkmark"></span>
+                                        Репутация бренда
+                                    </label>
+                                </div>
+                            </div>
+                            
+    <div class="form-group">
+    <label>Есть ли у вас аллергии или непереносимость?</label>
+    
+    <!-- Переключатель Да / Нет, оформленный как чекбоксы -->
+    <div class="checkbox-group" style="margin-bottom: 15px;">
+        <label class="checkbox">
+            <input type="checkbox" name="has-allergies" value="yes" id="allergy-yes">
+            <span class="checkmark"></span>
+            Да
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="has-allergies" value="no" id="allergy-no" checked>
+            <span class="checkmark"></span>
+            Нет
+        </label>
+    </div>
+
+    <!-- Поле для ввода (по умолчанию скрыто, так как выбрано "Нет") -->
+    <div id="allergy-input-wrapper" style="display: none;">
+        <textarea id="allergies" name="allergies" rows="2" placeholder="Например: лавандовое масло, ниацинамид..." disabled></textarea>
+    </div>
+</div>
+                                <div class="form-actions">
+                                <button type="button" class="btn btn-outline" onclick="prevStep(2)">← Назад</button>
+                                <button type="button" class="btn btn-primary" onclick="nextStep(4)">Продолжить →</button>
+                            </div>
+                        </div> 
+                        <!-- Шаг 4 -->
+                        <div class="survey-step" id="step-4">
+                            <h2>Анализ вашей кожи (рекомендуется)</h2>
+                            <p class="step-description">Загрузите фотографии вашего лица для точного анализа</p>
+                            
+                            <div class="photo-upload-grid">
+                                <div class="upload-area" id="front-upload">
+                                    <input type="file" id="front-photo" accept="image/*" capture="user">
+                                    <i class="fas fa-camera"></i>
+                                    <p>Фото анфас</p>
+                                    <div class="preview" id="front-preview"></div>
+                                    <div class="analysis-result" id="front-analysis"></div>
+                                </div>
+                                
+                                <div class="upload-area" id="side-upload">
+                                    <input type="file" id="side-photo" accept="image/*" capture="user">
+                                    <i class="fas fa-camera"></i>
+                                    <p>Фото в профиль</p>
+                                    <div class="preview" id="side-preview"></div>
+                                    <div class="analysis-result" id="side-analysis"></div>
+                                </div>
+                            </div>
+
+                            <div class="photo-analysis-summary" id="photo-summary" style="display: none;">
+                                <h3>📸 Результаты анализа фотографий</h3>
+                                <div class="analysis-results-grid">
+                                    <div class="analysis-card">
+                                        <h4>Тип кожи</h4>
+                                        <p id="analysis-skin-type">-</p>
+                                    </div>
+                                    <div class="analysis-card">
+                                        <h4>Обнаруженные проблемы</h4>
+                                        <p id="analysis-problems">-</p>
+                                    </div>
+                                    <div class="analysis-card">
+                                        <h4>Уровень акне</h4>
+                                        <p id="analysis-acne">-</p>
+                                    </div>
+                                    <div class="analysis-card">
+                                        <h4>Покраснения</h4>
+                                        <p id="analysis-redness">-</p>
+                                    </div>
+                                    <div class="analysis-card">
+                                        <h4>Мешки под глазами</h4>
+                                        <p id="analysis-bags">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" onclick="prevStep(3)">← Назад</button>
+                                <button type="button" class="btn btn-primary" onclick="nextStep(5)">Продолжить →</button>
+                            </div>
+                        </div>
+
+                        <!-- Шаг 5 -->
+                        <div class="survey-step" id="step-5">
+                            <h2>Готово!</h2>
+                            <p class="step-description">Спасибо за предоставленную информацию. Теперь мы можем проанализировать ваши данные.</p>
+                            
+                            <div class="summary-card">
+                                <h3>📋 Ваши данные</h3>
+                                <div class="summary-content" id="survey-summary"></div>
+                            </div>
+                            
+                            <div class="privacy-notice">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="privacy-agreement" required>
+                                    <span class="checkmark"></span>
+                                    Я соглашаюсь с обработкой моих персональных данных
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" onclick="prevStep(4)">← Назад</button>
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <i class="fas fa-rocket"></i> Начать анализ
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div> <!-- конец survey-main -->
+            </div> <!-- конец survey-wrapper -->
+
+            <!-- СЕКЦИЯ АНАЛИЗА (Скрыта, показывается после отправки) -->
+            <div id="analysis-section" class="results-section" style="display: none;">
+                <h2 style="margin-bottom: 30px; text-align: center;">🔬 Анализируем ваши данные...</h2>
+                
+                <div class="progress-circle-container" style="margin: 0 auto;">
+                    <svg class="progress-circle" viewBox="0 0 120 120" width="180" height="180">
+                        <defs>
+                            <linearGradient id="gradient-analysis" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#7EC8D6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#8BC4A0;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <g transform="rotate(-90 60 60)">
+                            <circle class="progress-bg" cx="60" cy="60" r="50"/>
+                            <circle class="progress-fill" cx="60" cy="60" r="50"
+                                stroke="url(#gradient-analysis)"
+                                stroke-dasharray="314.159" stroke-dashoffset="314.159" id="analysis-progress-circle"/>
+                        </g>
+                        <text class="progress-text-center" x="60" y="60" text-anchor="middle" dominant-baseline="central">
+                            <tspan id="analysis-percent" x="60" dy="-4" font-size="22" font-weight="700">0%</tspan>
+                        </text>
+                    </svg>
+                </div>
+                <p style="color: var(--text-secondary); margin-top: 20px; text-align: center;">Нейросеть обрабатывает фотографии и подбирает уход</p>
+            </div>
+
+            <!-- СЕКЦИЯ РЕКОМЕНДАЦИЙ (Скрыта, показывается после анализа) -->
+            <div id="recommendations-section" class="results-section" style="display: none;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h2>🎯 Ваши персональные рекомендации</h2>
+                    <p id="rec-explanation" style="color: var(--text-secondary); margin-top: 10px;"></p>
+                </div>
+
+                <div class="rec-stats-grid">
+                    <div class="rec-stat-card">
+                        <h3>Тип кожи</h3>
+                        <p id="rec-skin-type" class="value">-</p>
+                    </div>
+                    <div class="rec-stat-card">
+                        <h3>Уверенность ИИ</h3>
+                        <p id="rec-confidence" class="value">-</p>
+                    </div>
+                </div>
+
+                <div class="rec-routine-section">
+                    <h3>📝 Ваша рутина ухода</h3>
+                    <ul id="rec-routine"></ul>
+                </div>
+
+                <div class="rec-products-section">
+                    <h3>✨ Рекомендуемые продукты</h3>
+                    <div id="rec-products"></div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <button type="button" class="btn btn-outline rec-restart-btn" onclick="location.reload()">Пройти заново</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span>SkinGenius</span>
+                    <p class="footer-text">Персонализированный уход с использованием искусственного интеллекта</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">FAQ</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SkinGenius. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты --> 
+    <script src="skin-api-client.js"></script>
+    <script src="productsData.js"></script>
+    <script src="products-db.js"></script>
+    <script src="ml-engine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
